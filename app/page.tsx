@@ -1,4 +1,4 @@
-import Github from '../public/github-brands-solid.svg';
+
 export default function Home() {
   return (
     <div className="flex justify-center items-center w-full" style={{minHeight: '100vh'}}>
