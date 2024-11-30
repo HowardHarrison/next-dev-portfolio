@@ -13,7 +13,7 @@ export default function Intro(){
         <p className='text-lg text-left mx-2'>
           I love to know how software is built so I always try building my own by following tutorials from online resources.
           I intended to show my personal projects and achievements throughout my coding journey but
-          I am still working on it so you still won't see any cool stuffs:P
+          I am still working on it so you still won&apos;t see any cool stuff:P
         </p>
         <div className='flex justify-around mt-5'>
           <div className='w-8'>
