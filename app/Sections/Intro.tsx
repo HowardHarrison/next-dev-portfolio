@@ -1,10 +1,15 @@
+import Image from "next/image";
+
 export default function Intro(){
     return(
 <div className="flex justify-center items-center w-full" style={{minHeight: '100vh'}}>
-      <div className="bg-slate-50 max-w-[600px] text-center p-4 rounded-md">
+      <div className="max-w-[600px] text-center p-4">
         <div className="w-[250px] h-[250px] mx-auto rounded-full mb-3">
-          <img 
-          src="https://i.pinimg.com/736x/1f/a1/0c/1fa10cb2423fc7843e27022f6b9630e3.jpg"
+          <Image
+          src="/profile.jpg" 
+          alt="Profile Image"
+          width={250}
+          height={250}
           className="object-cover w-full h-full rounded-full"
           />
         </div>
