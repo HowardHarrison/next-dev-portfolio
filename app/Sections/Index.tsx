@@ -1,15 +1,19 @@
+import Navbar from "../components/Navbar";
 import Intro from "./Intro";
-// import Projects from "./Projects";
+import Journey from "./Journey";
 
 export default function Index() {
-    return(
-        <div className="snap-y snap-mandatory h-screen overflow-y-scroll">
-            <section className="snap-start">
-                <Intro/>
-            </section>
-            {/* <section className="snap-start">
-                <Projects/>
-            </section> */}
+    return (
+        <div>
+            <Navbar />
+            <div className="snap-y snap-mandatory h-screen overflow-y-scroll">
+                <section className="snap-start">
+                    <Intro />
+                </section>
+                <section className="snap-start">
+                    <Journey />
+                </section>
+            </div>
         </div>
-    )
+    );
 }
