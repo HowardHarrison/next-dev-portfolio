@@ -3,14 +3,14 @@ import Image from "next/image";
 import { useState } from "react";
 
 export default function Navbar() {
-    let Links = [
+    const Links = [
         { name: 'About', link: '/' },
         { name: 'Journey', link: '/members' },
         { name: 'Skills', link: '/upcoming-events' },
         { name: 'Certificate', link: '/special-events' },
         { name: 'Contact', link: '/videos' },
       ];
-      let [open, setOpen] = useState(false);
+      const [open, setOpen] = useState(false);
     return(
         <div>
             <nav className="top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 bg-slate-100">
