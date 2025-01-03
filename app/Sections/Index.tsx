@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import Certificate from "./Certificate";
+import Contact from "./Contact";
 import Intro from "./Intro";
 import Journey from "./Journey";
 import Skill from "./Skill";
@@ -20,6 +21,9 @@ export default function Index() {
                 </section>
                 <section className="snap-start">
                     <Certificate/>
+                </section>
+                <section className="snap-start">
+                    <Contact/>
                 </section>
             </div>
         </div>
