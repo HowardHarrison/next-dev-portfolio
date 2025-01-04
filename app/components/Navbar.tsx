@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Navbar() {
@@ -25,14 +26,14 @@ export default function Navbar() {
             <nav className="top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 bg-slate-100">
       <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
         <div className="flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-          <a href="/">
+          <Link href="/">
           <Image
           src='/logo.png'
           alt='logo'
           width={30}
           height={30}
           />
-          </a> 
+          </Link> 
         </div>
 
         {/* Icon to open and close */}
