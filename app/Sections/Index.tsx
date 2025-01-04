@@ -10,19 +10,19 @@ export default function Index() {
         <div>
             <Navbar />
             <div className="snap-y snap-mandatory h-screen overflow-y-scroll">
-                <section className="snap-start">
+                <section id='home' className="snap-start">
                     <Intro />
                 </section>
-                <section className="snap-start">
+                <section id='journey' className="snap-start">
                     <Journey />
                 </section>
-                <section className="snap-start">
+                <section id='skills' className="snap-start">
                     <Skill />
                 </section>
-                <section className="snap-start">
+                <section id='certificates' className="snap-start">
                     <Certificate/>
                 </section>
-                <section className="snap-start">
+                <section id='contact' className="snap-start">
                     <Contact/>
                 </section>
             </div>

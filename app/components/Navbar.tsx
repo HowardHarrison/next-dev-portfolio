@@ -3,12 +3,21 @@ import Image from "next/image";
 import { useState } from "react";
 
 export default function Navbar() {
+  const handleScroll = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+        section.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+        });
+    }
+};
     const Links = [
-        { name: 'About', link: '/' },
-        { name: 'Journey', link: '/members' },
-        { name: 'Skills', link: '/upcoming-events' },
-        { name: 'Certificate', link: '/special-events' },
-        { name: 'Contact', link: '/videos' },
+        { name: 'About', link: 'home' },
+        { name: 'Journey', link: 'journey' },
+        { name: 'Skills', link: 'skills' },
+        { name: 'Certificates', link: 'certificates' },
+        { name: 'Contact', link: 'contact' },
       ];
       const [open, setOpen] = useState(false);
     return(
@@ -16,12 +25,14 @@ export default function Navbar() {
             <nav className="top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 bg-slate-100">
       <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
         <div className="flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+          <a href="/">
           <Image
           src='/logo.png'
           alt='logo'
           width={30}
           height={30}
           />
+          </a> 
         </div>
 
         {/* Icon to open and close */}
@@ -54,26 +65,14 @@ export default function Navbar() {
         >
           {Links.map(link => (
             <li key={link.name} className="lg:ml-8 text-lg lg:my-0 sm:my-7 my-5">
-              <a
-                href={link.link}
-                className="text-gray-800 hover:text-gray-400 duration-500"
-              >
-                {link.name}
-              </a>
+               <button
+                        onClick={() => handleScroll(link.link)}
+                        className="hover:text-gray-400 transition-colors"
+                    >
+                      {link.name}
+                    </button>
             </li>
           ))}
-          <li className="lg:ml-8 text-lg lg:text-xl lg:my-0 sm:my-7 my-5">
-            {/* <Link
-              className="lg:text-slate-800 lg:hover:text-gray-300 text-gray-800 px-2 py-4 lg:py-2 flex items-center text-xs uppercase font-bold mx-auto"
-              href="/login"
-            > */}
-              {/* <FontAwesomeIcon
-                icon={faUser}
-                className="text-white-500"
-                size="2x"
-              /> */}
-            {/* </Link> */}
-          </li>
         </ul>
       </div>
     </nav>
