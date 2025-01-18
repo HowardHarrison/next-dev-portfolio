@@ -1,10 +1,10 @@
 import Head from "next/head";
 import Navbar from "../components/Navbar";
-import Certificate from "./Certificate";
-import Contact from "./Contact";
+// import Certificate from "./Certificate";
+// import Contact from "./Contact";
 import Intro from "./Intro";
-import Journey from "./Journey";
-import Skill from "./Skill";
+// import Journey from "./Journey";
+// import Skill from "./Skill";
 
 export default function Index() {
     return (
