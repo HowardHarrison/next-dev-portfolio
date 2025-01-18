@@ -39,7 +39,8 @@ export default function Navbar() {
         {/* Icon to open and close */}
         <button
           onClick={() => setOpen(!open)}
-          className="text-3xl absolute right-8 top-6 cursor-pointer lg:hidden"
+          //className="text-3xl absolute right-8 top-6 cursor-pointer lg:hidden"
+          className="flex justify-between lg:w-auto lg:static lg:justify-start md:hidden"
         >
           <svg
             className="w-6 h-6"
@@ -58,14 +59,14 @@ export default function Navbar() {
         </button>
 
         <ul
-          className={`lg:flex lg:items-center lg:pb-0 pb-4 absolute lg:static bg-slate-100 opacity-90  lg:z-auto z-[-1] left-0 w-full lg:w-auto lg:pl-0 sm:pl-9 pl-7 transition-all duration-500 ease-in 
+          className={`md:flex md:items-center md:pb-0 pb-4 absolute md:static bg-slate-100 opacity-90  md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 sm:pl-9 pl-7 transition-all duration-500 ease-in 
           ${
-            open ? 'top-[70px] ' : 'top-[-520px]'
+            open ? 'top-[50px] ' : 'top-[-520px]'
           }
           `}
         >
           {Links.map(link => (
-            <li key={link.name} className="lg:ml-8 text-lg lg:my-0 sm:my-7 my-5">
+            <li key={link.name} className="md:ml-8 text-lg md:my-0 sm:my-7 my-5">
                <button
                         onClick={() => handleScroll(link.link)}
                         className="hover:text-gray-400 transition-colors"

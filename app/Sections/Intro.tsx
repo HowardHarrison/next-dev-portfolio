@@ -7,7 +7,7 @@ export default function Intro() {
             style={{ minHeight: "100vh" }}
         >
             <div className="container mx-auto px-4">
-                <div className="flex items-center">
+                <div className="mt-3 flex flex-wrap items-center">
                     <div className="mx-auto w-72 p-4 md:w-80 lg:w-96">
                         <Image
                             src="/profile.jpg"
@@ -18,8 +18,8 @@ export default function Intro() {
                         />
                     </div>
 
-                    <div className="mx-auto w-full px-4 md:w-6/12">
-                        <div className="md:pr-12">
+                    <div className="mx-auto w-full px-4 md:w-6/12 ">
+                        <div className="md:pr-12 text-center md:text-left">
                             <h3 className="text-3xl font-semibold">
                                 Thurein Win Htun
                             </h3>
