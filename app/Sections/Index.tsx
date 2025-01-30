@@ -12,6 +12,7 @@ export default function Index() {
             <Head>
   <meta name="keywords" content="Next.js, SEO, React, JavaScript" />
   <meta name="author" content="Thurein Win Htun" />
+  <meta name="description" content="This is the portfolio website I made to showcase my skills and coding journey." />
   <meta property="og:title" content="Portfolio | Thurein Win Htun" />
   <meta property="og:description" content="This is the portfolio website I made to showcase my skills and coding journey." />
   <meta property="og:image" content="/profile.jpg" />
