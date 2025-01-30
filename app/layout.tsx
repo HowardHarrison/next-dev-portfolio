@@ -16,12 +16,12 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Portfolio | Thurein Win Htun",
   description: "This is the portfolio website I made to showcase my skills and coding journey.",
-  keywords: "Next.js, SEO, React, JavaScript",
+  keywords: "Thurein Win Htun, Myanmar, Software Developer",
   openGraph: {
     title: "Portfolio | Thurein Win Htun",
     description: "This is the portfolio website I made to showcase my skills and coding journey.",
     images: "/profile.jpg",
-    url: "https://thurein-dev-portfolio.vercel.app",
+    // url: "https://thurein-dev-portfolio.vercel.app",
   },
 };
 
