@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Navbar from "../components/Navbar";
 // import Certificate from "./Certificate";
 // import Contact from "./Contact";
@@ -9,15 +8,6 @@ import Intro from "./Intro";
 export default function Index() {
     return (
         <div>
-            <Head>
-  <meta name="keywords" content="Next.js, SEO, React, JavaScript" />
-  <meta name="author" content="Thurein Win Htun" />
-  <meta name="description" content="This is the portfolio website I made to showcase my skills and coding journey." />
-  <meta property="og:title" content="Portfolio | Thurein Win Htun" />
-  <meta property="og:description" content="This is the portfolio website I made to showcase my skills and coding journey." />
-  <meta property="og:image" content="/profile.jpg" />
-  <meta property="og:url" content="https://thurein-dev-portfolio.vercel.app" />
-</Head>
             <Navbar />
             <div className="snap-y snap-mandatory h-screen overflow-y-scroll">
                 <section id='home' className="snap-start">
