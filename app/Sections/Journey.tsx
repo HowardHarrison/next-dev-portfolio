@@ -10,12 +10,14 @@ export default function Journey() {
 
         if (scrollContainer) {
             // Set the scroll position to the far right
-            scrollContainer.scrollLeft = scrollContainer.scrollWidth;
+            scrollContainer.scrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth - 70;
         }
     }, []);
 
     return (
-        <div className="flex justify-center " style={{ minHeight: "100vh" }}>
+        <div className="flex justify-center items-center" 
+        style={{ minHeight: "100vh" }}
+        >
             <div className="">
                 <h1 className="text-3xl text-center font-semibold uppercase mt-20 mx-2">
                     My Coding Journey
@@ -30,20 +32,20 @@ export default function Journey() {
                     ref={scrollContainerRef}
                     className="w-screen sm:w-[550px] md:w-[800px] lg:w-[1100px] h-[600px] overflow-x-auto"
                 >
-                    <div className="relative w-[1600px] m-4">
+                    <div className="relative w-[1600px] my-2">
                         <div className="mt-10 py-4">
                             <div className="w-[1600px] bg-green-500 h-2"></div>
                         </div>
 
                         {/* spaceship */}
-                        <div className="absolute top-0 right-[-7px]">
+                        {/* <div className="absolute top-0 right-[-7px]">
                         <Image
                             src="/spaceship.png"
                             alt="space rocket"
                             width={60}
                             height={60}
                         />
-                        </div>
+                        </div> */}
 
                         {/* bars */}
                         <div className="absolute top-2 left-[200px]">
@@ -89,14 +91,14 @@ export default function Journey() {
                         </div>
                     </div>
                 </div>
-                {/* <div className=" mt-10 sm:mt-9 mr-3">
+                <div className=" mt-10 sm:mt-9 mr-3">
                     <Image
                         src="/spaceship.png"
                         alt="space rocket"
                         width={60}
                         height={60}
                     />
-                </div> */}
+                </div>
                 </div>
             </div>
         </div>

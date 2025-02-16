@@ -6,9 +6,9 @@ export default function Intro() {
             className="flex justify-center items-center w-full"
             style={{ minHeight: "100vh" }}
         >
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto px-4 mt-20 sm:mt-0">
                 <div className="mt-3 flex flex-wrap items-center">
-                    <div className="mx-auto w-72 p-4 md:w-80 lg:w-96">
+                    <div className="mx-auto w-3/4 sm:w-72 p-4 md:w-80 lg:w-96">
                         <Image
                             src="/profile.jpg"
                             alt="Profile Image"

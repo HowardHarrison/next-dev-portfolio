@@ -1,9 +1,9 @@
 import Navbar from "../components/Navbar";
-// import Certificate from "./Certificate";
-// import Contact from "./Contact";
+import Certificate from "./Certificate";
+import Contact from "./Contact";
 import Intro from "./Intro";
-// import Journey from "./Journey";
-// import Skill from "./Skill";
+import Journey from "./Journey";
+ import Skill from "./Skill";
 
 export default function Index() {
     return (
@@ -13,18 +13,23 @@ export default function Index() {
                 <section id='home' className="snap-start">
                     <Intro />
                 </section>
-                 {/* <section id='journey' className="snap-start">
+                  <section id='journey' className="snap-start">
                     <Journey />
                 </section>
                 <section id='skills' className="snap-start">
                     <Skill />
-                </section> */}
-                {/* <section id='certificates' className="snap-start">
+                </section>
+                <section id='certificates' className="snap-start">
                     <Certificate/>
                 </section>
                 <section id='contact' className="snap-start">
                     <Contact/>
-                </section> */}
+                </section>
+                {/* <Intro/>
+                <Journey/>
+                <Skill/>
+                <Certificate/>
+                <Contact/> */}
             </div>
         </div>
     );
