@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { HiMenu, HiX } from "react-icons/hi";
 
 export default function Navbar() {
   const handleScroll = (id: string) => {
@@ -23,15 +24,15 @@ export default function Navbar() {
       const [open, setOpen] = useState(false);
     return(
         <div>
-            <nav className="top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 bg-slate-100">
+            <nav className="top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 bg-slate-800">
       <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
         <div className="flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
           <Link href="/">
           <Image
-          src='/logo.png'
+          src='/logo2.png'
           alt='logo'
-          width={30}
-          height={30}
+          width={35}
+          height={35}
           />
           </Link> 
         </div>
@@ -39,27 +40,17 @@ export default function Navbar() {
         {/* Icon to open and close */}
         <button
           onClick={() => setOpen(!open)}
-          //className="text-3xl absolute right-8 top-6 cursor-pointer lg:hidden"
           className="flex justify-between lg:w-auto lg:static lg:justify-start md:hidden"
         >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d={open ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'}
-            ></path>
-          </svg>
+          {open ?
+          <HiX className="text-3xl text-slate-200"/>
+          :
+          <HiMenu className="text-3xl text-slate-200"/>
+          }
         </button>
 
         <ul
-          className={`md:flex md:items-center md:pb-0 pb-4 absolute md:static bg-slate-100 opacity-90  md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 sm:pl-9 pl-7 transition-all duration-500 ease-in 
+          className={`bg-slate-800 md:flex md:items-center md:pb-0 pb-4 absolute md:static opacity-90  md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 sm:pl-9 pl-7 transition-all duration-500 ease-in 
           ${
             open ? 'top-[50px] ' : 'top-[-520px]'
           }
@@ -69,7 +60,7 @@ export default function Navbar() {
             <li key={link.name} className="md:ml-8 text-lg md:my-0 sm:my-7 my-5">
                <button
                         onClick={() => handleScroll(link.link)}
-                        className="hover:text-gray-400 transition-colors"
+                        className="text-white hover:text-slate-300 transition-colors"
                     >
                       {link.name}
                     </button>

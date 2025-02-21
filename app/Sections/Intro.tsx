@@ -20,22 +20,19 @@ export default function Intro() {
 
                     <div className="mx-auto w-full px-4 md:w-6/12 ">
                         <div className="md:pr-12 text-center md:text-left">
-                            <h3 className="text-3xl font-semibold">
+                            <h3 className="text-3xl font-semibold text-slate-200">
                                 Thurein Win Htun
                             </h3>
 
-                            <p className="mt-4 text-xl italic leading-relaxed text-gray-800">
+                            <p className="mt-4 text-xl italic leading-relaxed text-slate-300">
                                 Software Developer
                             </p>
 
-                            <div className="text-lg">
+                            <div className="text-lg text-slate-300">
                                 {" "}
-                                I love to know how software is built so I always
-                                try building my own by following tutorials from
-                                online resources. I intended to show my personal
-                                projects and achievements throughout my coding
-                                journey but I am still working on it so you
-                                still won&apos;t see any cool stuff:P
+                                Welcome from portfolio website. I made this website to
+                                share my experiences and achievements throughout my
+                                coding journey.
                             </div>
                         </div>
                     </div>

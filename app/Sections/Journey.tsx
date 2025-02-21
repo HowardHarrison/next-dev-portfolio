@@ -1,6 +1,15 @@
 "use client";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
+
+interface Star {
+    id: number;
+    size: number;
+    top: string;
+    delay: number;
+    duration: number;
+  }
 
 export default function Journey() {
     const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -14,23 +23,58 @@ export default function Journey() {
         }
     }, []);
 
+    const [stars, setStars] = useState<Star[]>([]);
+
+  useEffect(() => {
+    const generatedStars: Star[] = Array.from({ length: 50 }).map((_, index) => ({
+      id: index,
+      size: Math.random() * 3 + 1, // Random star size
+      top: Math.random() * 100 + "vh", // Random vertical position
+      delay: Math.random() * 5, // Random delay
+      duration: Math.random() * 10 + 5, // Random speed
+    }));
+    setStars(generatedStars);
+  }, []);
+
     return (
         <div className="flex justify-center items-center" 
         style={{ minHeight: "100vh" }}
         >
+            <div className="relative w-full h-screen overflow-hidden bg-blue-950">
+      {stars.map((star) => (
+        <motion.div
+          key={star.id}
+          className="absolute bg-white rounded-full"
+          style={{
+            width: `${star.size}px`,
+            height: `${star.size}px`,
+            top: star.top,
+          }}
+          initial={{ x: "100vw", opacity: 0 }}
+          animate={{ x: "-10vw", opacity: 1 }}
+          transition={{
+            duration: star.duration,
+            ease: "linear",
+            repeat: Infinity,
+            delay: star.delay,
+          }}
+        />
+      ))}
             <div className="">
-                <h1 className="text-3xl text-center font-semibold uppercase mt-20 mx-2">
+                <h1 className="text-3xl text-center text-white font-semibold uppercase mt-20 mx-2">
                     My Coding Journey
                 </h1>
-                <div className="mt-2 mx-2 text-center">
+                <div className="mt-2 mx-2 text-center text-slate-300">
                     This is the showcase of my experiences throughout this
                     coding journey.
                 </div>
 
-                <div className="flex">
+                 {/* Spaceship section    */}
+                <div className="w-full">
+                <div className="flex justify-center">
                 <div
                     ref={scrollContainerRef}
-                    className="w-screen sm:w-[550px] md:w-[800px] lg:w-[1100px] h-[600px] overflow-x-auto"
+                    className="w-screen sm:w-[550px] md:w-[800px] lg:w-[1100px] h-[600px] overflow-x-auto ml-3"
                 >
                     <div className="relative w-[1600px] my-2">
                         <div className="mt-10 py-4">
@@ -51,9 +95,9 @@ export default function Journey() {
                         <div className="absolute top-2 left-[200px]">
                             <div className="flex w-[1200px] justify-between">
                                 <div className="relative">
-                                    <div className=" w-6 h-6 bg-slate-200 rounded-full"></div>
-                                    <div className="absolute top-4 left-2 -z-10 w-2 h-20 bg-gray-600"></div>
-                                    <div className="absolute top-20 left-[-140px] z-10 bg-white w-[280px] h-[320px] sm:w-[300px] sm:h-[340px] border border-sm border-black rounded-2xl ">
+                                    <div className="w-6 h-6 bg-slate-200 rounded-full"></div>
+                                    <div className="absolute top-4 left-2 w-2 h-24 bg-slate-200"></div>
+                                    <div className="absolute top-20 left-[-140px] bg-white w-[280px] h-[320px] sm:w-[300px] sm:h-[340px] border border-sm border-black rounded-2xl ">
                                         <div className="w-full bg-slate-300 h-[40px] sm:h-[60px] rounded-t-2xl">
                                             <div className="font-semibold text-2xl w-full h-full flex justify-center items-center">2022</div>
                                             
@@ -64,8 +108,16 @@ export default function Journey() {
                                     </div>
                                 </div>
                                 <div className="relative">
+                                    <div className="w-6 h-6 bg-slate-200 rounded-full"></div>
+                                    <div className="absolute top-4 left-2 w-2 h-24 bg-slate-200"></div>
+                                    <div className="absolute top-20 left-[-140px] bg-white w-[280px] h-[320px] sm:w-[300px] sm:h-[340px] border border-sm border-black rounded-2xl">
+                                        <div className="w-full bg-slate-300 h-[60px] rounded-t-2xl"></div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                                <div className="relative">
                                     <div className=" w-6 h-6 bg-slate-200 rounded-full"></div>
-                                    <div className="absolute top-4 left-2 -z-10 w-2 h-20 bg-gray-600"></div>
+                                    <div className="absolute top-4 left-2 w-2 h-20 bg-slate-200"></div>
                                     <div className="absolute top-20 left-[-140px] z-10 bg-white w-[280px] h-[320px] sm:w-[300px] sm:h-[340px] border border-sm border-black rounded-2xl">
                                         <div className="w-full bg-slate-300 h-[60px] rounded-t-2xl"></div>
                                         <div></div>
@@ -73,15 +125,7 @@ export default function Journey() {
                                 </div>
                                 <div className="relative">
                                     <div className=" w-6 h-6 bg-slate-200 rounded-full"></div>
-                                    <div className="absolute top-4 left-2 -z-10 w-2 h-20 bg-gray-600"></div>
-                                    <div className="absolute top-20 left-[-140px] z-10 bg-white w-[280px] h-[320px] sm:w-[300px] sm:h-[340px] border border-sm border-black rounded-2xl">
-                                        <div className="w-full bg-slate-300 h-[60px] rounded-t-2xl"></div>
-                                        <div></div>
-                                    </div>
-                                </div>
-                                <div className="relative">
-                                    <div className=" w-6 h-6 bg-slate-200 rounded-full"></div>
-                                    <div className="absolute top-4 left-2 -z-10 w-2 h-20 bg-gray-600"></div>
+                                    <div className="absolute top-4 left-2 w-2 h-20 bg-slate-200"></div>
                                     <div className="absolute top-20 left-[-140px] z-10 bg-white w-[280px] h-[320px] sm:w-[300px] sm:h-[340px] border border-sm border-black rounded-2xl">
                                         <div className="w-full bg-slate-300 h-[60px] rounded-t-2xl"></div>
                                         <div></div>
@@ -100,7 +144,10 @@ export default function Journey() {
                     />
                 </div>
                 </div>
+                </div>
+                
             </div>
+        </div>    
         </div>
     );
 }

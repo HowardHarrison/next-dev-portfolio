@@ -86,10 +86,10 @@ export default function Slideshow() {
 {certificates.map(item => (
     <div key={item.id}>
       <img src={item.image} className=''/>
-      <div className='w-full flex justify-center mx-auto bg-slate-200 rounded-b'>
+      <div className='w-full flex justify-center mx-auto bg-slate-200'>
         <div className='bg-yellow-50 p-1 my-2 ml-2 rounded-bl rounded-tl overflow-auto whitespace-nowrap'>{item.link}</div>
         <div className='bg-slate-300 p-1 my-2 mr-2 rounded-br rounded-tr'>
-        <Link href={item.link} className='text-white'>
+        <Link href={item.link} target='_blank' className='text-white'>
           <MdOpenInNew className='w-6 h-6'/>
         </Link>  
         </div>

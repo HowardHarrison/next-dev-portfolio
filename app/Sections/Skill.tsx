@@ -237,7 +237,7 @@ export default function Skill() {
         style={{ minHeight: "100vh" }}
         >
             <div className="container mx-auto mt-20 w-[1200px]">
-                <div className=" text-2xl font-semibold mx-6 mb-6 text-center">My Software Development Skills</div>
+                <div className=" text-2xl font-semibold mx-6 mb-6 text-center text-white">My Software Development Skills</div>
                 <div
                     className="px-4 md:grid md:grid-cols-6 md:grid-rows-6 gap-4"
                     style={{ minHeight: "90%" }}
