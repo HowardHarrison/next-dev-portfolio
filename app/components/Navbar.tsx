@@ -24,7 +24,7 @@ export default function Navbar() {
       const [open, setOpen] = useState(false);
     return(
         <div>
-            <nav className="top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 bg-slate-800">
+            <nav className="top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 bg-slate-900">
       <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
         <div className="flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
           <Link href="/">
@@ -50,7 +50,7 @@ export default function Navbar() {
         </button>
 
         <ul
-          className={`bg-slate-800 md:flex md:items-center md:pb-0 pb-4 absolute md:static opacity-90  md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 sm:pl-9 pl-7 transition-all duration-500 ease-in 
+          className={`bg-slate-900 md:flex md:items-center md:pb-0 pb-4 absolute md:static opacity-90  md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 sm:pl-9 pl-7 transition-all duration-500 ease-in 
           ${
             open ? 'top-[50px] ' : 'top-[-520px]'
           }
