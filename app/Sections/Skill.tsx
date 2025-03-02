@@ -1,16 +1,13 @@
-import Image from "next/image";
 import { IconType } from "react-icons";
 import {
-    DiJavascript1,
     DiReact,
     DiHtml5,
     DiCss3,
     DiNodejsSmall,
     DiRedis,
-    DiAws,
 } from "react-icons/di";
 import ProgressCircle from "../components/ProgressCircle";
-import { SiAmazon, SiAmazonwebservices, SiAwsamplify, SiBitbucket, SiCanva, SiConfluence, SiExpress, SiFigma, SiGit, SiGithub, SiGooglecloud, SiGooglecloudstorage, SiGraphql, SiJavascript, SiJira, SiLaravel, SiMongodb, SiMui, SiMysql, SiNextdotjs, SiRedis, SiRedux, SiSlack, SiSocketdotio, SiTailwindcss, SiThreedotjs, SiTypescript } from "react-icons/si";
+import { SiAmazonwebservices, SiBitbucket, SiCanva, SiConfluence, SiExpress, SiFigma, SiGit, SiGithub, SiGooglecloud, SiGraphql, SiJavascript, SiJira, SiLaravel, SiMongodb, SiMui, SiMysql, SiNextdotjs, SiRedux, SiSlack, SiSocketdotio, SiTailwindcss, SiThreedotjs, SiTypescript } from "react-icons/si";
 
 interface IconItem {
     id: number;

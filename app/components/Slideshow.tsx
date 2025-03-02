@@ -3,9 +3,10 @@ import { Carousel  } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { MdOpenInNew } from 'react-icons/md';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Slideshow() {
-    let certificates = [
+    const certificates = [
         // {
         //     id: 1,
         //     title: 'JavaScript',
@@ -15,26 +16,26 @@ export default function Slideshow() {
         {
             id: 2,
             title: 'JavaScript Intermediate',
-            image: 'Certificate/photo_2.jpeg',
+            image: '/Certificate/photo_2.jpeg',
             link: 'https://www.sololearn.com/certificates/CC-J9Y5ZE2L'
         },
         {
             id: 3,
             title: 'Game Development with JS',
-            image: 'Certificate/photo_3.jpeg',
+            image: '/Certificate/photo_3.jpeg',
             link: 'https://www.sololearn.com/certificates/CT-1RNKIBDN'
         },
         {
             id: 4,
             title: 'React + Redux',
-            image: 'Certificate/photo_4.jpeg',
+            image: '/Certificate/photo_4.jpeg',
             link: 'https://www.sololearn.com/certificates/CT-OTAXDOTB'
         },
     ]
 
   const renderCustomArrowPrev = (
     onClickHandler: React.MouseEventHandler<HTMLButtonElement>,
-    hasPrev: boolean
+    //hasPrev: boolean
   ) => {
     return (
       <button
@@ -51,7 +52,7 @@ export default function Slideshow() {
 
   const renderCustomArrowNext = (
     onClickHandler: React.MouseEventHandler<HTMLButtonElement>,
-    hasNext: boolean
+    //hasNext: boolean
   ) => {
     return (
       <button
@@ -85,7 +86,7 @@ export default function Slideshow() {
         >
 {certificates.map(item => (
     <div key={item.id}>
-      <img src={item.image} className=''/>
+      <Image src={item.image} alt="Description of the image" width={500} height={300}/>
       <div className='w-full flex justify-center mx-auto bg-slate-200'>
         <div className='bg-yellow-50 p-1 my-2 ml-2 rounded-bl rounded-tl overflow-auto whitespace-nowrap'>{item.link}</div>
         <div className='bg-slate-300 p-1 my-2 mr-2 rounded-br rounded-tr'>
