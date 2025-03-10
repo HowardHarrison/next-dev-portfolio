@@ -6,7 +6,7 @@ export default function Contact() {
         <div className="h-[100px] w-full" 
         // style={{ minHeight: "70px" }}
         >
-            <div className="mx-auto my-3 py-3 bg-slate-900">
+            <div className="mx-auto py-3 bg-slate-900">
                 <div className="mx-auto text-3xl font-semibold text-center text-white">
                     Contact me
                 </div>

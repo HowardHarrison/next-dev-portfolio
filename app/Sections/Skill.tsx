@@ -1,3 +1,4 @@
+"use client";
 import { IconType } from "react-icons";
 import {
     DiReact,
@@ -8,6 +9,7 @@ import {
 } from "react-icons/di";
 import ProgressCircle from "../components/ProgressCircle";
 import { SiAmazonwebservices, SiBitbucket, SiCanva, SiConfluence, SiExpress, SiFigma, SiGit, SiGithub, SiGooglecloud, SiGraphql, SiJavascript, SiJira, SiLaravel, SiMongodb, SiMui, SiMysql, SiNextdotjs, SiRedux, SiSlack, SiSocketdotio, SiTailwindcss, SiThreedotjs, SiTypescript } from "react-icons/si";
+import { motion } from "framer-motion";
 
 interface IconItem {
     id: number;
@@ -234,7 +236,26 @@ export default function Skill() {
         style={{ minHeight: "100vh" }}
         >
             <div className="container mx-auto mt-20 w-[1200px]">
+                <motion.div
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.5 }}
+                  custom={0}
+                  variants={{
+                    hidden: { opacity: 0, x: -50 },
+                    visible: (i: any) => ({
+                      opacity: 1,
+                      x: 0,
+                      transition: {
+                        delay: i * 0.3,
+                        duration: 0.6,
+                        ease: "easeOut",
+                      },
+                    }), 
+                  }}
+                >
                 <div className=" text-2xl font-semibold mx-6 mb-6 text-center text-white">My Software Development Skills</div>
+                </motion.div>
                 <div
                     className="px-4 md:grid md:grid-cols-6 md:grid-rows-6 gap-4"
                     style={{ minHeight: "90%" }}

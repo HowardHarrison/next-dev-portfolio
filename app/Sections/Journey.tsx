@@ -61,6 +61,24 @@ export default function Journey() {
         />
       ))}
             <div className="">
+                <motion.div
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.5 }}
+                  custom={0}
+                  variants={{
+                    hidden: { opacity: 0, x: -50 },
+                    visible: (i: any) => ({
+                      opacity: 1,
+                      x: 0,
+                      transition: {
+                        delay: i * 0.3,
+                        duration: 0.6,
+                        ease: "easeOut",
+                      },
+                    }), 
+                  }}
+                >
                 <h1 className="text-3xl text-center text-white font-semibold uppercase mt-20 mx-2">
                     My Coding Journey
                 </h1>
@@ -68,6 +86,7 @@ export default function Journey() {
                     This is the showcase of my experiences throughout this
                     coding journey.
                 </div>
+                </motion.div>
 
                  {/* Spaceship section    */}
                 <div className="w-full">

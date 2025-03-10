@@ -7,29 +7,24 @@ import Journey from "./Journey";
 
 export default function Index() {
     return (
-        <div>
+        <div className="bg-blue-950">
             <Navbar />
-            <div className="snap-y snap-mandatory h-screen overflow-y-scroll bg-blue-950">
-                <section id='home' className="snap-start">
+            <div className="md:snap-y md:snap-mandatory h-screen md:overflow-y-scroll">
+                <section id='home' className="md:snap-start bg-blue-950">
                     <Intro />
                 </section>
-                  <section id='journey' className="snap-start">
+                  <section id='journey' className="md:snap-start bg-blue-950">
                     <Journey />
                 </section>
-                <section id='skills' className="snap-start">
+                <section id='skills' className="md:snap-start bg-blue-950">
                     <Skill />
                 </section>
-                <section id='certificates' className="snap-start">
+                <section id='certificates' className="md:snap-start bg-blue-950">
                     <Certificate/>
                 </section>
-                <section id='contact' className="snap-start">
+                <section id='contact' className="md:snap-start bg-blue-950">
                     <Contact/>
                 </section>
-                {/* <Intro/>
-                <Journey/>
-                <Skill/>
-                <Certificate/>
-                <Contact/> */}
             </div>
         </div>
     );
