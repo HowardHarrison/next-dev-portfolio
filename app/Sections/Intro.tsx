@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const textVariants = {
     hidden: { opacity: 0, x: -50 },
-    visible: (i: any) => ({
+    visible: (i: number) => ({
       opacity: 1,
       x: 0,
       transition: {
@@ -30,7 +30,7 @@ export default function Intro() {
                       custom={0}
                       variants={{
                         hidden: { opacity: 0, y: -35 },
-                        visible: (i: any) => ({
+                        visible: (i: number) => ({
                           opacity: 1,
                           y: 0,
                           transition: {

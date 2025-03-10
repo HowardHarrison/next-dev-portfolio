@@ -243,7 +243,7 @@ export default function Skill() {
                   custom={0}
                   variants={{
                     hidden: { opacity: 0, x: -50 },
-                    visible: (i: any) => ({
+                    visible: (i: number) => ({
                       opacity: 1,
                       x: 0,
                       transition: {
