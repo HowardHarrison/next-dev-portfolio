@@ -46,7 +46,7 @@ const frontendIconsArray: IconItem[] = [
         Icon: SiTypescript,
         name: "TS",
         className: "text-blue-400 text-2xl mr-1",
-        percentage: 40
+        percentage: 55
     },
     {
         id: 5,
@@ -157,14 +157,14 @@ const designIconsArray: IconItem[] = [
         Icon: SiFigma,
         name: "Figma",
         className: "text-black-500 text-2xl mr-1",
-        percentage: 70
+        percentage: 60
     },
     {
         id: 2,
         Icon: SiCanva,
         name: "Canva",
         className: "text-blue-500 text-2xl mr-1",
-        percentage: 70
+        percentage: 60
     },
 ]
 
@@ -239,7 +239,7 @@ export default function Skill() {
                 <motion.div
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: true, amount: 0.5 }}
+                  viewport={{ once: false, amount: 0.5 }}
                   custom={0}
                   variants={{
                     hidden: { opacity: 0, x: -50 },
@@ -256,11 +256,45 @@ export default function Skill() {
                 >
                 <div className=" text-2xl font-semibold mx-6 mb-6 text-center text-white">My Software Development Skills</div>
                 </motion.div>
+                {/* <motion.div
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: false, amount: 0.5 }}
+                  custom={0}
+                  variants={{
+                    hidden: { opacity: 0, y: -10 },
+                    visible: (i: number) => ({
+                      opacity: 1,
+                      y: 0,
+                      transition: {
+                        delay: i * 0.3,
+                        duration: 0.6,
+                        ease: "easeOut",
+                      },
+                    }), 
+                  }}> */}
                 <div
                     className="px-4 md:grid md:grid-cols-6 md:grid-rows-6 gap-4"
                     style={{ minHeight: "90%" }}
                 >
-                    <div className="mb-4 md:mb-0 md:col-span-3 md:row-span-3">
+                  <motion.div
+                  className="mb-4 md:mb-0 md:col-span-3 md:row-span-3"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: false, amount: 0.5 }}
+                  custom={0}
+                  variants={{
+                    hidden: { opacity: 0, y: -5 },
+                    visible: (i: number) => ({
+                      opacity: 1,
+                      y: 0,
+                      transition: {
+                        delay: i * 0.3,
+                        duration: 0.6,
+                        ease: "easeOut",
+                      },
+                    }), 
+                  }}>               
                         <div className=" bg-slate-200 w-full h-full border border-sm border-black rounded-2xl">
                             <div className="w-full bg-slate-300 h-[60px] rounded-t-2xl px-2 pt-4 text-xl font-semibold">
                                 Frontend Development
@@ -283,10 +317,27 @@ export default function Skill() {
                                     )
                                 )}
                             </div>
-                        </div>
-                    </div>
+                        </div>                   
+                  </motion.div>   
 
-                    <div className="mb-4 md:mb-0 md:col-span-3 md:row-span-2">
+                  <motion.div
+                  className="mb-4 md:mb-0 md:col-span-3 md:row-span-2"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: false, amount: 0.5 }}
+                  custom={0}
+                  variants={{
+                    hidden: { opacity: 0, y: -5 },
+                    visible: (i: number) => ({
+                      opacity: 1,
+                      y: 0,
+                      transition: {
+                        delay: i * 0.3,
+                        duration: 0.6,
+                        ease: "easeOut",
+                      },
+                    }), 
+                  }}>              
                         <div className="  bg-slate-200 w-full h-full border border-sm border-black rounded-2xl">
                             <div className="w-full bg-slate-300 h-[60px] rounded-t-2xl px-2 pt-4 text-xl font-semibold">
                                 Design & Prototype
@@ -310,9 +361,26 @@ export default function Skill() {
                                 )}
                             </div>
                         </div>
-                    </div>
+                  </motion.div>
 
-                    <div className="mb-4 md:mb-0 md:col-span-3 md:row-span-2">
+                  <motion.div
+                  className="mb-4 md:mb-0 md:col-span-3 md:row-span-2"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: false, amount: 0.5 }}
+                  custom={0}
+                  variants={{
+                    hidden: { opacity: 0, y: -5 },
+                    visible: (i: number) => ({
+                      opacity: 1,
+                      y: 0,
+                      transition: {
+                        delay: i * 0.3,
+                        duration: 0.6,
+                        ease: "easeOut",
+                      },
+                    }), 
+                  }}>   
                         <div className="  bg-slate-200 w-full h-full border border-sm border-black rounded-2xl">
                             <div className="w-full bg-slate-300 h-[60px] rounded-t-2xl px-2 pt-4 text-xl font-semibold">
                                 DevOps & Cloud
@@ -336,9 +404,26 @@ export default function Skill() {
                                 )}
                             </div>
                         </div>
-                    </div>
+                  </motion.div>  
 
-                    <div className="mb-4 md:mb-0 md:col-span-3 md:row-span-3">
+                  <motion.div
+                  className="mb-4 md:mb-0 md:col-span-3 md:row-span-3"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: false, amount: 0.5 }}
+                  custom={0}
+                  variants={{
+                    hidden: { opacity: 0, y: -5 },
+                    visible: (i: number) => ({
+                      opacity: 1,
+                      y: 0,
+                      transition: {
+                        delay: i * 0.3,
+                        duration: 0.6,
+                        ease: "easeOut",
+                      },
+                    }), 
+                  }}>   
                         <div className="  bg-slate-200 w-full h-full border border-sm border-black rounded-2xl">
                             <div className="w-full bg-slate-300 h-[70px] rounded-t-2xl px-2 pt-3 sm:pt-4 text-xl font-semibold">
                                 Database & Backend Development
@@ -362,9 +447,26 @@ export default function Skill() {
                                 )}
                             </div>
                         </div>
-                    </div>
+                    </motion.div>  
 
-                    <div className="mb-4 md:mb-0 md:col-span-3 md:row-span-2">
+                    <motion.div
+                    className="mb-4 md:mb-0 md:col-span-3 md:row-span-2"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: false, amount: 0.5 }}
+                  custom={0}
+                  variants={{
+                    hidden: { opacity: 0, y: -5 },
+                    visible: (i: number) => ({
+                      opacity: 1,
+                      y: 0,
+                      transition: {
+                        delay: i * 0.3,
+                        duration: 0.6,
+                        ease: "easeOut",
+                      },
+                    }), 
+                  }}>                 
                         <div className="  bg-slate-200 w-full h-full border border-sm border-black rounded-2xl">
                             <div className="w-full bg-slate-300 h-[60px] rounded-t-2xl px-2 pt-4 text-xl font-semibold">
                                 Collaboration tools
@@ -388,9 +490,10 @@ export default function Skill() {
                                 )}
                             </div>
                         </div>
-                    </div>
+                    </motion.div>  
 
                 </div>
+
             </div>
         </div>
     );

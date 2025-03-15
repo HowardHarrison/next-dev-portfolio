@@ -1,29 +1,48 @@
+import { useEffect, useState } from "react";
+import { motion, useAnimation } from "framer-motion";
+
 interface ProgressCircleProps {
     percentage: number;
 }
 
 export default function ProgressCircle({ percentage }: ProgressCircleProps) {
-    // Constrain the percentage between 0 and 100
-    const constrainedPercentage = Math.min(Math.max(percentage, 0), 100);
+    const [displayedPercentage, setDisplayedPercentage] = useState(0);
+    const controls = useAnimation();
 
-    // Define gradient from red to green
-    const gradientColor = `conic-gradient(
-        hsl(${(120 * constrainedPercentage) / 100}, 100%, 50%) ${constrainedPercentage * 3.6}deg,
-        #d1d5db ${constrainedPercentage * 3.6}deg
-      )`;
+    useEffect(() => {
+        controls.start({
+            background: `conic-gradient(
+                hsl(${(120 * percentage) / 100}, 100%, 50%) ${0}deg ${percentage * 3.6}deg,
+                #d1d5db ${percentage * 3.6}deg 360deg
+            )`,
+            transition: { duration: 5000, ease: "easeInOut" },
+        });
+
+        const interval = setInterval(() => {
+            setDisplayedPercentage((prev) => {
+                if (prev < percentage) return prev + 1;
+                clearInterval(interval);
+                return prev;
+            });
+        }, 10);
+
+        return () => clearInterval(interval);
+    }, [percentage, controls]);
 
     return (
         <div className="flex justify-center items-center ml-2">
-            <div
+            <motion.div
                 className="relative w-11 h-11 rounded-full flex items-center justify-center text-white font-bold text-xl"
-                style={{
-                    background: gradientColor
-                }}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.5 }}
+                custom={0}
+                animate={controls}
             >
-                <div className="w-9 h-9 bg-slate-100 rounded-full p-1 pt-2 text-center text-sm text-black ">
-                    {constrainedPercentage}%
+                <div className="w-9 h-9 bg-slate-100 rounded-full p-1 pt-2 text-center text-sm text-black">
+                    {displayedPercentage}%
                 </div>
-            </div>
+            </motion.div>
         </div>
     );
 }

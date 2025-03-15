@@ -9,7 +9,7 @@ export default function Index() {
     return (
         <div className="bg-blue-950">
             <Navbar />
-            <div className="md:snap-y md:snap-mandatory h-screen md:overflow-y-scroll">
+            <div className="md:snap-y md:snap-mandatory h-screen md:overflow-y-scroll bg-blue-950">
                 <section id='home' className="md:snap-start bg-blue-950">
                     <Intro />
                 </section>
