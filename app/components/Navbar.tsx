@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 
@@ -13,7 +12,7 @@ export default function Navbar() {
             block: "start",
         });
     }
-};
+  };
     const Links = [
         { name: 'About', link: 'home' },
         { name: 'Journey', link: 'journey' },
@@ -21,20 +20,20 @@ export default function Navbar() {
         { name: 'Certificates', link: 'certificates' },
         { name: 'Contact', link: 'contact' },
       ];
-      const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(false);
     return(
         <div>
             <nav className="top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 bg-slate-900">
       <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
         <div className="flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-          <Link href="/">
+          <button onClick={() => handleScroll('home')}>
           <Image
           src='/logo2.png'
           alt='logo'
           width={35}
           height={35}
           />
-          </Link> 
+          </button>
         </div>
 
         {/* Icon to open and close */}
