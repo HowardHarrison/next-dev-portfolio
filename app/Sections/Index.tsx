@@ -9,7 +9,7 @@ export default function Index() {
     return (
         <div className="bg-blue-950">
             <Navbar />
-            <div className="md:snap-y md:snap-mandatory h-screen md:overflow-y-scroll bg-blue-950">
+            {/* <div className="md:snap-y md:snap-mandatory h-screen md:overflow-y-scroll bg-blue-950">
                 <section id='home' className="md:snap-start bg-blue-950">
                     <Intro />
                 </section>
@@ -25,7 +25,12 @@ export default function Index() {
                 <section id='contact' className="md:snap-start bg-blue-950">
                     <Contact/>
                 </section>
-            </div>
+            </div> */}
+            <section id="home"><Intro /></section>
+            <section id="journey"><Journey /></section>
+            <section id="skills"><Skill /></section>
+            <section id="certificates"><Certificate /></section>
+            <section id="contact"><Contact /></section>
         </div>
     );
 }

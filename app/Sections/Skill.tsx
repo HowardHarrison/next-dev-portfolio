@@ -174,14 +174,14 @@ const cloudIconsArray: IconItem[] = [
         Icon: SiAmazonwebservices,
         name: "AWS",
         className: "text-black-500 text-2xl mr-1",
-        percentage: 20
+        percentage: 5
     },
     {
         id: 2,
         Icon: SiGooglecloud,
         name: "GCP",
         className: "text-slate-500 text-2xl mr-1",
-        percentage: 30
+        percentage: 10
     },
 ]
 
