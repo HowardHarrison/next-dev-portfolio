@@ -17,6 +17,7 @@ export default function Navbar() {
         { name: 'About', link: 'home' },
         { name: 'Journey', link: 'journey' },
         { name: 'Skills', link: 'skills' },
+        { name: 'Projects', link: 'projects' },
         { name: 'Certificates', link: 'certificates' },
         { name: 'Contact', link: 'contact' },
       ];

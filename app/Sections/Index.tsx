@@ -3,6 +3,7 @@ import Certificate from "./Certificate";
 import Contact from "./Contact";
 import Intro from "./Intro";
 import Journey from "./Journey";
+import Projects from "./Projects";
  import Skill from "./Skill";
 
 export default function Index() {
@@ -29,6 +30,7 @@ export default function Index() {
             <section id="home"><Intro /></section>
             <section id="journey"><Journey /></section>
             <section id="skills"><Skill /></section>
+            <section id="projects"><Projects /></section>
             <section id="certificates"><Certificate /></section>
             <section id="contact"><Contact /></section>
         </div>

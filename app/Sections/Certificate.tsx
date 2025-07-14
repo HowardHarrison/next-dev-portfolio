@@ -1,9 +1,12 @@
 "use client";
+import Starfield from "../animation/StarField";
 import Slideshow from "../components/Slideshow";
 import { motion } from "framer-motion";
 
 export default function Certificate() {
     return (
+        <div className="relative w-full h-screen bg-blue-950">
+                    <Starfield count={100}/>
         <div className="flex justify-center items-center" 
          style={{ minHeight: "100vh" }}
         >
@@ -42,6 +45,7 @@ export default function Certificate() {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     );
 }

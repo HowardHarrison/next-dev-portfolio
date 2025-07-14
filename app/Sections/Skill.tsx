@@ -10,6 +10,7 @@ import {
 import ProgressCircle from "../components/ProgressCircle";
 import { SiAmazonwebservices, SiBitbucket, SiCanva, SiConfluence, SiExpress, SiFigma, SiGit, SiGithub, SiGooglecloud, SiGraphql, SiJavascript, SiJira, SiLaravel, SiMongodb, SiMui, SiMysql, SiNextdotjs, SiRedux, SiSlack, SiSocketdotio, SiTailwindcss, SiThreedotjs, SiTypescript } from "react-icons/si";
 import { motion } from "framer-motion";
+import Starfield from "../animation/StarField";
 
 interface IconItem {
     id: number;
@@ -232,8 +233,10 @@ const collaborationIconsArray: IconItem[] = [
 
 export default function Skill() {
     return (
+        <div className="relative w-full bg-blue-950">
+          <Starfield count={100}/>
         <div className="flex justify-center" 
-        style={{ minHeight: "100vh" }}
+        // style={{ minHeight: "100vh" }}
         >
             <div className="container mx-auto mt-20 w-[1200px]">
                 <motion.div
@@ -495,6 +498,7 @@ export default function Skill() {
                 </div>
 
             </div>
+        </div>
         </div>
     );
 }

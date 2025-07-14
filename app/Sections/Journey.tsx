@@ -72,7 +72,7 @@ export default function Journey() {
 
   return (
     <div className="flex justify-center items-center"
-      style={{ minHeight: "100vh" }}
+   //   style={{ minHeight: "100vh" }}
     >
       <div className="relative w-full h-screen overflow-hidden bg-blue-950">
         {stars.map((star) => (
@@ -179,8 +179,9 @@ export default function Journey() {
                                     <Image
                                       src={year.image}
                                       alt="image"
-                                      width={100}
-                                      height={150}
+                                      width={500}
+                                      height={500}
+                                      quality={100}
                                       className="w-full h-full"
                                     />
                                   }
