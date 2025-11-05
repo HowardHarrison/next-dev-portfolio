@@ -1,7 +1,6 @@
 "use client"
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 import Link from "next/link";
 import { FaDownload } from "react-icons/fa";
 import Starfield from "../animation/StarField";
