@@ -27,7 +27,7 @@ export default async function ProjectPage({ params }: PageProps) {
         <div className="py-20 z-10">
           <div className="container max-w-[800px] mx-auto px-4">
             <Image
-              src={foundProject.image}
+              src={foundProject.image[0]}
               alt={foundProject.title}
               width={800}
               height={400}

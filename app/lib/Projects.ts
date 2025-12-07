@@ -3,7 +3,7 @@ export interface Project {
   title: string;
   description: string;
   tech: string[];
-  image: string;
+  image: string[];
 }
 
 export const projects: Project[] = [
@@ -12,6 +12,6 @@ export const projects: Project[] = [
     title: 'Bookonnect',
     description: 'A book review platform where users can browse and read reviews, as well as sign up to write and manage their own reviews.',
     tech: ['React', 'Redux Tookit Query', 'Node.js', 'Express.js', 'MongoDB'],
-    image: '/Journey/2024.jpg', 
+    image: ['/Projects/bookonnect-1.JPG'], 
   }
 ];

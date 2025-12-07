@@ -257,7 +257,7 @@ export default function Skill() {
                     }), 
                   }}
                 >
-                <div className=" text-2xl font-semibold mx-6 mb-6 text-center text-white">My Software Development Skills</div>
+                <div className=" text-2xl font-semibold mx-6 mb-8 text-center text-white">My Software Development Skills</div>
                 </motion.div>
                 {/* <motion.div
                   initial="hidden"
