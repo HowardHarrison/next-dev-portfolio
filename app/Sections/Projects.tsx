@@ -39,6 +39,7 @@ const Projects = () => {
                         <div className="mt-5 grid w-full grid-cols-1 gap-4 md:grid-cols-3">
                             {projects.map((project) => (
                                 <div
+                                    key={project.slug}
                                     className="bg-slate-200 m-4 mx-auto h-[460px] w-[320px] rounded-lg border border-slate-800 md:h-[500px] md:w-[360px]"
                                 >
                                     {/* image*/}
